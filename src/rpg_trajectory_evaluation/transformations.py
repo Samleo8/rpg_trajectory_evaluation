@@ -1871,7 +1871,7 @@ def unit_vector(data, axis=None, out=None):
             data /= math.sqrt(numpy.dot(data, data))
             return data
     else:
-        if out is not data:
+        if out != data:
             out[:] = numpy.array(data, copy=False)
         data = out
     length = numpy.atleast_1d(numpy.sum(data*data, axis))
